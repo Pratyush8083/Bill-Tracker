@@ -1,0 +1,12 @@
+<mvc:View xmlns:viz="sap.viz.ui5.controls" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="SAP-Bill-Tracker.SAP-Bill-Tracker.controller.View1" displayBlock="true">
+		<App id="View1">
+			<Page title="Bill Tracker"
+					showNavButton="true"
+					navButtonPress="onNavBack">
+					<content>
+						<viz:VizFrame id="idcolumn" width="100%"/>
+						
+					</content>
+				</Page>
+		</App>
+</mvc:View>

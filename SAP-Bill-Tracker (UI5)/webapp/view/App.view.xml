@@ -1,0 +1,90 @@
+<core:View xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="SAP-Bill-Tracker.SAP-Bill-Tracker.controller.App">
+<App id="App">
+	<pages>
+		<Page title="Bill Tracker">
+		
+		<Panel expandable="true" expanded="true" headerText="Add Bill Info" width="auto" class="sapUiResponsiveMargin">
+		<content>
+			<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form1">
+			
+			<sap.ui.layout.form:FormContainer id="__container1">
+			<sap.ui.layout.form:formElements>
+				<sap.ui.layout.form:FormElement label="Bill Number" id="bill_num"><sap.ui.layout.form:fields>
+				<Input width="50%" id="b_num" required="true" type="Number"/>
+				</sap.ui.layout.form:fields>
+				</sap.ui.layout.form:FormElement>
+				<sap.ui.layout.form:FormElement label="Bill Date" id="bill_date"><sap.ui.layout.form:fields>
+				<DatePicker id="b_date" valueFormat="yyyy-MM-dd" displayFormat="long" placeholder="Enter Date ..." change="handleChange" class="sapUiSmallMarginBottom" width="50%" required="true"/>
+				</sap.ui.layout.form:fields>
+				</sap.ui.layout.form:FormElement>
+				<sap.ui.layout.form:FormElement label="Amount" id="bill_amount"><sap.ui.layout.form:fields>
+				<Input width="50%" id="b_amount" required="true" type="Number"/>
+				</sap.ui.layout.form:fields>
+				</sap.ui.layout.form:FormElement>
+				</sap.ui.layout.form:formElements>
+			</sap.ui.layout.form:FormContainer>
+			<sap.ui.layout.form:layout>
+			<sap.ui.layout.form:ResponsiveGridLayout id="__layout1"/>
+			</sap.ui.layout.form:layout>
+			</sap.ui.layout.form:Form>
+		</content>
+			<Toolbar height="3rem">
+			<Button xmlns="sap.m" icon="sap-icon://save" text="Save" width="20%" press="onSave" type="Accept"/>
+			<ToolbarSpacer/>
+			<Button icon="sap-icon://bar-chart" type="Emphasized" width="20%" text="Generate Graph" press="onPress"/>
+			</Toolbar>
+		</Panel>
+		
+		<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin">
+			<headerToolbar>
+			<Toolbar height="3rem">
+			<Title text="Recent Bills"/>
+			<Button icon="sap-icon://refresh" press="onRefresh"/>
+			<ToolbarSpacer/>
+			<Input width="15%" id="b_num_del" required="false" type="Number" placeholder="Bill Number"/>
+			<Button icon="sap-icon://sys-minus" text="Delete Data" type="Reject" press="onDelete"/>
+			</Toolbar>
+			</headerToolbar>
+		<content>
+			<Table id="myTable" items="{/}" growing="true" growingThreshold="4" growingScrollToLoad="false">
+				<items>
+				<ColumnListItem id="itemlist">
+				<cells>
+					<Text text="{id}" id="Id"/>
+					<Text text="{date}" id="Date"/>
+					<Text text="{month}" id="Month"/>
+					<Text text="{amount}" id="Amount"/>
+				</cells>
+				</ColumnListItem>
+				</items>
+			<columns>
+			<Column id="bill">
+				<header>
+				<Label text="Bill Number" id="_num"/>
+				</header>
+			</Column>
+			<Column id="date">
+				<header>
+				<Label text="Date" id="_date"/>
+				</header>
+			</Column>
+			<Column id="month">
+				<header>
+				<Label text="Month" id="_month"/>
+				</header>
+			</Column>
+			<Column id="amount">
+				<header>
+				<Label text="Amount" id="_amount"/>
+				</header>
+			</Column>
+			</columns>
+			</Table>
+		</content>
+		</Panel>
+		
+	</Page>
+	</pages>
+
+</App>
+</core:View>

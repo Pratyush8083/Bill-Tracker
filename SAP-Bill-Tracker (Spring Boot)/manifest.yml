@@ -1,0 +1,8 @@
+---
+applications:
+- name: bill_tracker
+  memory: 1024M
+  buildpack: java_buildpack
+  path: target/Bill-Tracker-0.0.1-SNAPSHOT.war
+  services:
+    - hana_migration

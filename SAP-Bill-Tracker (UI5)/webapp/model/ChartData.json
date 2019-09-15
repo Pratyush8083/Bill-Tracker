@@ -1,0 +1,27 @@
+{
+	"Bill": [{
+		"Month": "Jan",
+		"Expense": "20000"
+	},{
+		"Month": "Feb",
+		"Expense": "40000"
+	},{
+		"Month": "Mar",
+		"Expense": "15000"
+	},{
+		"Month": "Apr",
+		"Expense": "35000"
+	},{
+		"Month": "May",
+		"Expense": "5000"
+	},{
+		"Month": "Jun",
+		"Expense": "14000"
+	},{
+		"Month": "Jul",
+		"Expense": "27000"
+	},{
+		"Month": "Aug",
+		"Expense": "50000"
+	}]
+}
